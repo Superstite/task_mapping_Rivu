@@ -1,6 +1,6 @@
 // Code your testbench here
 // or browse Examples
-module task_mapper_tb; 
+module array_check_tb; 
   localparam NUM_V=4;   
   reg clk;
   reg rst;
@@ -13,34 +13,41 @@ module task_mapper_tb;
     #1 root_task=1'b0;   
   end
 
-  initial begin
-    #18 root_task=1'b1; 
-    $display("time=%d ns root_task= %d",$time, root_task);
-  end
-
-  initial begin
-    #28 root_task=1'b0;   
-  end
-
 
   logic [31:0] task_graph [2:0][2:0];
-  assign task_graph = '{{32'd0,32'd5,32'd0},{32'd5,32'd0,32'd6},{32'd0,32'd6,32'd0}};
-  int i,j;
   logic [31:0] row ,col;
+  logic [2:0] count_root_task;
+  int i,j;
+
+
 
   initial begin
     row=0;
     col =0;
-  end
+  end 
 
+  assign task_graph = '{{32'd0,32'd5,32'd0},{32'd5,32'd0,32'd6},{32'd0,32'd6,32'd0}};
+  //pushing each application loop ~~~~~~~~~~ 
   initial begin
     row=0;
+    count_root_task='0;
     // giving opp. becuase of SV array
     for(i=2;i>=0;i--) begin
       col=0;
       for(j=2;j>=0;j--) begin
-        #20; //2 clk cyle to read next task
+        if( root_task == '0) begin
+          #20; //2 clk cyle to read next task
+        end else begin 
+          #10 root_task=1'b0;
+          #10;
+        end
         task_array = task_graph[i][j];
+        if (task_array!='0) begin 
+          count_root_task=count_root_task+3'b001;
+          if(count_root_task==3'b001) begin
+            root_task=1'b1;
+          end
+        end
         `ifdef debug_help  
         $display("time = %f ns i= %d  j=%d task_array= %d task_graph = %d",$time,row,col,task_array,task_graph[i][j]);  
         // $display("time %d ns row %d col %d",$time,row,col);
@@ -51,7 +58,7 @@ module task_mapper_tb;
       row++;
     end
   end 
-
+  //pushing each application loop ~~~~~~~~~~
 
   //-timescale=1ns/1ns +vcs+flush+all +warn=all  +define+debug_help -sverilog
   task_mapper U0 ( 
