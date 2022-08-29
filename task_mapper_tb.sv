@@ -1,6 +1,6 @@
 // Code your testbench here
 
-module array_check_tb; 
+module task_mapper_tb; 
   localparam NUM_V=4;   
   reg clk;
   reg rst;
