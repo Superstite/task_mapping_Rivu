@@ -9,6 +9,7 @@ module task_mapper (
   input logic rst_b,
   input logic [31:0] task_array, // task graph input
   input logic root_task, // application id is required
+  input logic [31:0] row,col,
   output logic [31:0] src_id,dest_id
 );
 
@@ -16,20 +17,9 @@ module task_mapper (
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
   //Keep this part of code in sync with TB
-  int i,j,row,col;
-  initial begin
-    row=0;
-    // giving opp. becuase of SV array
-    for(i=2;i>=0;i--) begin
-      row=i;
-      for(j=2;j>=0;j--) begin
-        #20; //2 clk cyle to read next task
-        col=j;
-      end
-    end
-  end 
+  int i,j;
 
-  int task_graph_to_idmap[2:0][2:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
+  int task_graph_to_idmap[3:0][3:0]  = '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
@@ -72,6 +62,15 @@ module task_mapper (
       else
         divby2_clk <= ~divby2_clk;	
     end
+
+  logic divby4_clk;
+  always @(posedge divby2_clk)
+    begin
+      if (~rst_b)
+        divby4_clk <= 1'b1;
+      else
+        divby4_clk <= ~divby4_clk;	
+    end
   //###############
 
   //PE occupaction state matrix   - intialization 
@@ -93,7 +92,7 @@ module task_mapper (
 
   int l,m;
   //C-Matrix  - Manhattan distance   between any PE and the task controller (MTC or STC)- MD(aij ) = | 𝑥i − 𝑥j|+| 𝑦i − 𝑦j |.
-  //mirrored bcz of SV array
+  //SV array
   int  Cm [3:0][3:0] ='{{6,5,4,3},{5,4,3,2},{4,3,2,1},{3,2,1,10}};    //self highest= 10 // MTC -(0,0) 
   int  C1 [3:0][3:0] ='{{3,4,5,6},{2,3,4,5},{1,2,3,4},{10,1,2,3}};      // STC -(0,7)
   int  C2 [3:0][3:0] ='{{10,1,2,3},{1,2,3,4},{2,3,4,5},{3,4,5,6}};      // STC -(7,7)
@@ -326,7 +325,7 @@ module task_mapper (
   ////#############################child task mapping//#############################  
 
 
-  //###################### negedge detector //######################
+  //###################### negedge detector for child task detection//######################
   logic child_task,root_task_ff;
 
   always_latch begin
@@ -401,10 +400,27 @@ module task_mapper (
     end
   end
 
+  //PE release after
+  always@(posedge clk) begin
+    foreach(pm[i,j]) begin
+      if(pm[i][j]==1'b1) begin
+        `ifdef debug_help 
+        $display("1. time =%d ns i=%d  j=%d of pm Matrix %d is used",$time,i,j,pm[i][j]);
+        `endif
+        @(posedge divby2_clk);  @(posedge divby2_clk); @(posedge divby2_clk);  @(posedge divby2_clk);
+        @(posedge divby2_clk); begin pm[i][j]=1'b0;  end // delay by number of element in a row of task graph X task pushing interval // 4x20=80
+        `ifdef debug_help 
+        $display("2. time =%d ns i=%d  j=%d of pm Matrix %d is released ",$time,i,j,pm[i][j]);
+        `endif
+      end
+    end
+    //$display(" time =%dns pm matrix %p",$time);
+  end
+
 
   `ifdef debug_help 
   always @(posedge clk)
-    $display("time %d ns task_graph_to_idmap array  %p",$time,task_graph_to_idmap);
+    $display("time %d ns row %d col %d of  task_graph_to_idmap array  %p is %d",$time,row,col, task_graph_to_idmap,task_graph_to_idmap[row][col]);
   `endif
   //##############################################################################
 
