@@ -18,7 +18,7 @@ module task_mapper (
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
   //Keep this part of code in sync with TB
   int i,j;
-
+  int l,m;
   int task_graph_to_idmap[3:0][3:0]  = '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -90,7 +90,7 @@ module task_mapper (
   localparam ThMax=1.7; //70% usage of cluster      
 
 
-  int l,m;
+
   //C-Matrix  - Manhattan distance   between any PE and the task controller (MTC or STC)- MD(aij ) = | 𝑥i − 𝑥j|+| 𝑦i − 𝑦j |.
   //SV array
   int  Cm [3:0][3:0] ='{{6,5,4,3},{5,4,3,2},{4,3,2,1},{3,2,1,10}};    //self highest= 10 // MTC -(0,0) 
@@ -390,7 +390,9 @@ module task_mapper (
           src_id=  id_decoder_mtc(i,j);
           task_graph_to_idmap[int'(row)][int'(col)]= src_id;
           dest_id= (task_graph_to_idmap[int'(col)][int'(row)]==0)?src_id:task_graph_to_idmap[int'(col)][int'(row)];
-
+          if(int'(C_child.min())==1000)
+            $display(" time =%dns Cluster 1 is busy",$time);
+          else
           $display(" time =%dns src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child.min()));
 
           current_mapped_node_x=i;
