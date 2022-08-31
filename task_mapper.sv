@@ -8,7 +8,7 @@ module task_mapper (
   input logic clk,
   input logic rst_b,
   input logic [31:0] task_array, // task graph input
-  input logic root_task, // application id is required
+  input logic root_task,app_end, // application start and end indication
   input logic [31:0] row,col,
   output logic [31:0] src_id,dest_id
 );
@@ -295,7 +295,7 @@ module task_mapper (
 
   ////#############################root task mapping//#############################
 
-  always@(posedge clk) begin
+  always@(posedge divby2_clk) begin
 
     if(root_task==1'b1) begin
       foreach(D[i,j]) begin 
@@ -308,7 +308,7 @@ module task_mapper (
           src_id =  id_decoder_mtc(i,j);
           task_graph_to_idmap[row][col]= src_id;
           dest_id= src_id;
-          $display(" time =%dns src_id= %d dest_id=%d",$time,src_id,dest_id);
+          $display(" time =%dns src_id= %d dest_id=%d Minimum MD 0 i.e root_task",$time,src_id,dest_id);
 
 
           current_mapped_node_x=i;
@@ -372,6 +372,7 @@ module task_mapper (
       `endif
     end
   end
+
   //##############################################################################
 
 
@@ -379,7 +380,7 @@ module task_mapper (
   always@(posedge divby2_clk) begin
     if(child_task==1'b1 & (task_array!=0)) begin
       foreach(C_child[i,j]) begin 
-        if(C_child[i][j]==int'(cmin_child)) begin
+        if(C_child[i][j]==int'(C_child.min())) begin
           pm[i][j]=1'b1;
 
           `ifdef debug_help    
@@ -390,17 +391,20 @@ module task_mapper (
           task_graph_to_idmap[int'(row)][int'(col)]= src_id;
           dest_id= (task_graph_to_idmap[int'(col)][int'(row)]==0)?src_id:task_graph_to_idmap[int'(col)][int'(row)];
 
-          $display(" time =%dns src_id= %d dest_id=%d",$time,src_id,dest_id);
+          $display(" time =%dns src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child.min()));
 
           current_mapped_node_x=i;
           current_mapped_node_y=j;
           break;
         end
+        else begin
+          //  $display("time %dns Cchild_matrixmin %d",$time,int'(C_child.min()));
+        end
       end
     end
   end
 
-  //PE release after
+  //PE release after delay by number of element in a row of task graph X task pushing interval // 4x20=80
   always@(posedge clk) begin
     foreach(pm[i,j]) begin
       if(pm[i][j]==1'b1) begin
@@ -417,6 +421,13 @@ module task_mapper (
     //$display(" time =%dns pm matrix %p",$time);
   end
 
+
+  //flush task_graph_to_idmap matrix at end of each application execuetion
+  always @(posedge clk) begin
+    if(app_end==1'b1)
+      task_graph_to_idmap <= '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+  end
+  ////////////////
 
   `ifdef debug_help 
   always @(posedge clk)
