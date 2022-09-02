@@ -14,6 +14,10 @@ module task_mapper (
 );
 
 
+  `include "algo_variable.sv"
+  logic [31:0]  threshold_detection_logic;
+
+
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
   //Keep this part of code in sync with TB
@@ -78,7 +82,7 @@ module task_mapper (
     return id;
   endfunction
 
-    function int id_decoder_stc2 ( input [31:0] i,j); 
+  function int id_decoder_stc2 ( input [31:0] i,j); 
     int id;
     case({i,j})
       {32'd0,32'd0}:id=36;
@@ -146,14 +150,6 @@ module task_mapper (
         divby2_clk <= ~divby2_clk;	
     end
 
-  logic divby4_clk;
-  always @(posedge divby2_clk)
-    begin
-      if (~rst_b)
-        divby4_clk <= 1'b1;
-      else
-        divby4_clk <= ~divby4_clk;	
-    end
   //###############
 
   //PE occupaction state matrix   - intialization 
@@ -168,11 +164,85 @@ module task_mapper (
   //Thm -PE occupation threshold of MTC’s cluster 
   //Th-is -PE occupation threshold of ith STC’s cluster
   //
-  //TODO occupation threshold =    num of 1 /num of 0
+  //TODO occupation threshold =    num of 1 /num of pe in  cluster
   //function to calculate number of 0 and 1 in occupation matrix for every clock cylce 
-  localparam ThMax=1.7; //70% usage of cluster      
+  localparam thmax=0.9; //90% usage of cluster    
+  real th_mtc,th_stc1,th_stc2,th_stc3;
+  real zero_count_mtc,one_count_mtc;
+  real zero_count_stc1,one_count_stc1;
+  real zero_count_stc2,one_count_stc2;
+  real zero_count_stc3,one_count_stc3;
 
+  always@(negedge clk) begin
+    zero_count_mtc=0;
+    foreach(pm[i,j]) begin
+      if(pm[i][j]==0) begin
+        zero_count_mtc++;
+      end
+    end
+    one_count_mtc=16-zero_count_mtc;
+    th_mtc=(one_count_mtc/16);
+    `ifdef debug_help
+    // $display("time =%d ns zero %d one %d occupation threshold of mtc %f",$time,zero_count_mtc,one_count_mtc,th_mtc);
+    `endif
+  end
 
+  always@(negedge clk) begin
+    zero_count_stc1=0;
+    foreach(ps1[i,j]) begin
+      if(ps1[i][j]==0) begin
+        zero_count_stc1++;
+      end
+    end
+    one_count_stc1=16-zero_count_stc1;
+    th_stc1=(one_count_stc1/16);
+    `ifdef debug_help
+    // $display("time =%d ns zero %d one %d occupation threshold of stc1 %f",$time,zero_count_stc1,one_count_stc1,th_stc1);
+    `endif
+  end
+
+  always@(negedge clk) begin
+    zero_count_stc2=0;
+    foreach(ps2[i,j]) begin
+      if(ps2[i][j]==0) begin
+        zero_count_stc2++;
+      end
+    end
+    one_count_stc2=16-zero_count_stc2;
+    th_stc2=(one_count_stc2/16);
+    `ifdef debug_help
+    // $display("time =%d ns zero %d one %d occupation threshold of stc2 %f",$time,zero_count_stc2,one_count_stc2,th_stc2);
+    `endif
+  end
+
+  always@(negedge clk) begin
+    zero_count_stc3=0;
+    foreach(ps3[i,j]) begin
+      if(ps3[i][j]==0) begin
+        zero_count_stc3++;
+      end
+    end
+    one_count_stc3=16-zero_count_stc3;
+    th_stc3=(one_count_stc3/16);
+    `ifdef debug_help
+    //$display("time =%d ns zero %d one %d occupation threshold of stc2 %f",$time,zero_count_stc3,one_count_stc3,th_stc3);
+    `endif
+  end
+
+  real threshold_cluster[3:0];
+  int min_threshold_cluster[$];
+  real item[$];
+
+  always@(negedge clk) begin
+    threshold_cluster='{th_stc3,th_stc2,th_stc1,th_mtc};
+    item=threshold_cluster.min();
+    min_threshold_cluster=threshold_cluster.find_last_index(x) with (x==item[0]);
+    // `ifdef debug_help
+    $display("time =%d threshold_cluster array= %p cluster %d has min threshold",$time,threshold_cluster,min_threshold_cluster[0]);
+    // `endif
+  end
+
+  /////////////////////////////////////////////////////////////////////////
 
   //C-Matrix  - Manhattan distance   between any PE and the task controller (MTC or STC)- MD(aij ) = | 𝑥i − 𝑥j|+| 𝑦i − 𝑦j |.
   //SV array
@@ -294,6 +364,72 @@ module task_mapper (
     ds3_33 <= ps3[1][3]+ps3[2][2]+ps3[2][3]+ps3[3][1]+ps3[3][2]; 
 
   end
+
+  //##############################################################################
+  //The D matrix: D(PE) is defined as the number of idle neighbors of that PE
+
+  always@(posedge clk) begin
+    D='{{dm_00 , dm_01 , dm_02 , dm_03} , {dm_10 , dm_11 , dm_12 , dm_13} , {dm_20 , dm_21 , dm_22 , dm_23 }, {dm_30 , dm_31 , dm_32 , dm_33}}; 
+    foreach(D[i,j]) begin
+      // dmax=int'(D.max()with(item>0));
+      `ifdef debug_help
+      if(root_task)
+        $display("Dmatrix of mtc time =%dns i=%d j=%d  element %d",$time,i,j,D[i][j]);
+      `endif
+    end
+    // $display("Dmatrix time =%dns %p weightage maximum idle neigbour",$time,dmax);
+  end
+  //##############################################################################
+
+  //##############################################################################
+  //The D matrix: D(PE) is defined as the number of idle neighbors of that PE
+
+  always@(posedge clk) begin
+    D_stc1='{{ds1_00 , ds1_01 , ds1_02 , ds1_03} , {ds1_10 , ds1_11 , ds1_12 , ds1_13} , {ds1_20 , ds1_21 , ds1_22 , ds1_23 }, {ds1_30 , ds1_31 , ds1_32 , ds1_33}}; 
+    foreach(D_stc1[i,j]) begin
+      // dmax_stc1=int'(D_stc1.max()with(item>0));
+      `ifdef debug_help
+      if(root_task)
+        $display("Dmatrix of stc1 time =%dns i=%d j=%d  element %d",$time,i,j,D_stc1[i][j]);
+      `endif
+    end
+    // $display("Dmatrix time =%dns %p weightage maximum idle neigbour",$time,dmax_stc1);
+  end
+  //##############################################################################
+  //##############################################################################
+  //The D matrix: D(PE) is defined as the number of idle neighbors of that PE
+
+  always@(posedge clk) begin
+    D_stc2='{{ds2_00 , ds2_01 , ds2_02 , ds2_03} , {ds2_10 , ds2_11 , ds2_12 , ds2_13} , {ds2_20 , ds2_21 , ds2_22 , ds2_23 }, {ds2_30 , ds2_31 , ds2_32 , ds2_33}}; 
+    foreach(D_stc2[i,j]) begin
+      // dmax_stc2=int'(D_stc2.max()with(item>0));
+      `ifdef debug_help
+      if(root_task)
+        $display("Dmatrix of stc2 time =%dns i=%d j=%d  element %d",$time,i,j,D_stc2[i][j]);
+      `endif
+    end
+    // $display("Dmatrix time =%dns %p weightage maximum idle neigbour",$time,dmax_stc2);
+  end
+  //##############################################################################
+
+  //##############################################################################
+  //The D matrix: D(PE) is defined as the number of idle neighbors of that PE
+
+  always@(posedge clk) begin
+    D_stc3='{{ds3_00 , ds3_01 , ds3_02 , ds3_03} , {ds3_10 , ds3_11 , ds3_12 , ds3_13} , {ds3_20 , ds3_21 , ds3_22 , ds3_23 }, {ds3_30 , ds3_31 , ds3_32 , ds3_33}}; 
+    foreach(D_stc3[i,j]) begin
+      // dmax_stc3=int'(D_stc3.max()with(item>0));
+      `ifdef debug_help
+      if(root_task)
+        $display("Dmatrix of stc3 time =%dns i=%d j=%d  element %d",$time,i,j,D_stc3[i][j]);
+      `endif
+    end
+    // $display("Dmatrix time =%dns %p weightage maximum idle neigbour",$time,dmax_stc3);
+  end
+  //############################################################################## 
+
+
+
   //###################### negedge detector for child task detection//######################
   logic child_task,root_task_ff;
 
@@ -312,26 +448,7 @@ module task_mapper (
 
 
   //##############################################################################
-  //
-  //##############################
-  // Algorithm start here        #
-  //##############################
 
-  
-   `include "algo_variable.sv"
-
- 
-   //case(threshold_detection_logic)
-  case(2'b11)
-      0: begin  `include "mtc.sv"   end
-      1: begin  `include "stc1.sv"  end
-      2: begin  `include "stc2.sv"  end
-      3: begin  `include "stc3.sv"  end
-      default: begin `include "mtc.sv"   end 
-   endcase
-
-  //algorithm end
-  //
   //
 
   //flush task_graph_to_idmap matrix at end of each application execuetion
@@ -339,13 +456,42 @@ module task_mapper (
     if(app_end==1'b1)
       task_graph_to_idmap <= '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
   end
-  ////////////////
+
 
   `ifdef debug_help 
   always @(posedge clk)
     $display("time %d ns row %d col %d of  task_graph_to_idmap array  %p is %d",$time,row,col, task_graph_to_idmap,task_graph_to_idmap[row][col]);
   `endif
+  ////////////////
+
+
+  // assign each application to a cluster which have least occupation threshold
+
+  always @(posedge clk) begin
+    if(~rst_b) begin threshold_detection_logic<='0; end
+    else begin
+      if((app_end==1'b1) || (real'(th_mtc) > thmax) || (real'(th_stc1) > thmax) ||(real'(th_stc2) > thmax) ||(real'(th_stc3) > thmax))
+        threshold_detection_logic<=min_threshold_cluster[0];
+      else
+        threshold_detection_logic<=threshold_detection_logic;
+    end
+    // `ifdef debug_help 
+    $display("time %d ns %d cluster selected ",$time,threshold_detection_logic);
+    //`endif
+  end
   //##############################################################################
+
+  //
+  //##############################
+  // Algorithm start here        #
+  //##############################
+  `include "mtc.sv"   
+  `include "stc1.sv"  
+  `include "stc2.sv"  
+  `include "stc3.sv" 
+
+  //algorithm end
+  //
 
 endmodule
 
