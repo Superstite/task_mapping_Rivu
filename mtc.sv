@@ -9,7 +9,7 @@ end
 
 
 always@(posedge clk) begin
-  if(root_task==1'b1) begin
+  if((root_task==1'b1) && (threshold_detection_logic==32'd0)) begin
 
     foreach(pm[i,j]) begin
       if(pm[i][j]== '0) begin
@@ -28,25 +28,11 @@ always@(posedge clk) begin
   end
 end
 
-//##############################################################################
-//The D matrix: D(PE) is defined as the number of idle neighbors of that PE
 
-always@(posedge clk) begin
-  D='{{dm_00 , dm_01 , dm_02 , dm_03} , {dm_10 , dm_11 , dm_12 , dm_13} , {dm_20 , dm_21 , dm_22 , dm_23 }, {dm_30 , dm_31 , dm_32 , dm_33}}; 
-  foreach(D[i,j]) begin
-    // dmax=int'(D.max()with(item>0));
-    `ifdef debug_help
-    if(root_task)
-      $display("Dmatrix time =%dns i=%d j=%d  element %d",$time,i,j,D[i][j]);
-    `endif
-  end
-  // $display("Dmatrix time =%dns %p weightage maximum idle neigbour",$time,dmax);
-end
-//##############################################################################
 
 //Maximum D calculation  
 always@(posedge clk) begin
-  if(root_task==1'b1) begin
+  if((root_task==1'b1) && (threshold_detection_logic==32'd0)) begin
     foreach(C[i,j]) begin
       if(C[i][j]==int'(cmin)) begin
         `ifdef debug_help
@@ -64,7 +50,7 @@ end
 
 always@(posedge divby2_clk) begin
 
-  if(root_task==1'b1) begin
+  if((root_task==1'b1)&& (threshold_detection_logic==32'd0)) begin
     foreach(D[i,j]) begin 
       if(D[i][j]==int'(dmax)) begin
         pm[i][j]=1'b1;
@@ -97,7 +83,7 @@ end
 //###################### MD calculation for child task //######################
 
 always@(posedge clk) begin
-  if(child_task==1'b1) begin
+  if((child_task==1'b1)&& (threshold_detection_logic==32'd0)) begin
 
     foreach(pm[i,j]) begin
       if(pm[i][j]== '0) begin
@@ -128,7 +114,7 @@ end
 
 ////#############################child task mapping final step //#############################  
 always@(posedge divby2_clk) begin
-  if(child_task==1'b1 & (task_array!=0)) begin
+  if(((child_task==1'b1)&& (threshold_detection_logic==32'd0)) & (task_array!=0)) begin
     foreach(C_child[i,j]) begin 
       if(C_child[i][j]==int'(C_child.min())) begin
         pm[i][j]=1'b1;
