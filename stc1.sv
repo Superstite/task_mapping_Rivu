@@ -9,7 +9,7 @@ end
 
 
 always@(posedge clk) begin
-  if(root_task==1'b1) begin
+  if((root_task==1'b1) && (threshold_detection_logic==32'd1)) begin
 
     foreach(ps1[i,j]) begin
       if(ps1[i][j]== '0) begin
@@ -28,25 +28,11 @@ always@(posedge clk) begin
   end
 end
 
-//##############################################################################
-//The D matrix: D(PE) is defined as the number of idle neighbors of that PE
 
-always@(posedge clk) begin
-  D_stc1='{{ds1_00 , ds1_01 , ds1_02 , ds1_03} , {ds1_10 , ds1_11 , ds1_12 , ds1_13} , {ds1_20 , ds1_21 , ds1_22 , ds1_23 }, {ds1_30 , ds1_31 , ds1_32 , ds1_33}}; 
-  foreach(D_stc1[i,j]) begin
-    // dmax_stc1=int'(D_stc1.max()with(item>0));
-    `ifdef debug_help
-    if(root_task)
-      $display("Dmatrix of stc1 time =%dns i=%d j=%d  element %d",$time,i,j,D_stc1[i][j]);
-    `endif
-  end
-  // $display("Dmatrix time =%dns %p weightage maximum idle neigbour",$time,dmax_stc1);
-end
-//##############################################################################
 
 //Maximum D calculation  
 always@(posedge clk) begin
-  if(root_task==1'b1) begin
+  if((root_task==1'b1)&& (threshold_detection_logic==32'd1)) begin
     foreach(C_stc1[i,j]) begin
       if(C_stc1[i][j]==int'(cmin_stc1)) begin
         `ifdef debug_help
@@ -64,7 +50,7 @@ end
 
 always@(posedge divby2_clk) begin
 
-  if(root_task==1'b1) begin
+  if((root_task==1'b1)&& (threshold_detection_logic==32'd1)) begin
     foreach(D_stc1[i,j]) begin 
       if(D_stc1[i][j]==int'(dmax_stc1)) begin
         ps1[i][j]=1'b1;
@@ -97,7 +83,7 @@ end
 //###################### MD calculation for child task //######################
 
 always@(posedge clk) begin
-  if(child_task==1'b1) begin
+  if((child_task==1'b1)&& (threshold_detection_logic==32'd1)) begin
 
     foreach(ps1[i,j]) begin
       if(ps1[i][j]== '0) begin
@@ -128,7 +114,7 @@ end
 
 ////#############################child task mapping final step //#############################  
 always@(posedge divby2_clk) begin
-  if(child_task==1'b1 & (task_array!=0)) begin
+  if(((child_task==1'b1)&& (threshold_detection_logic==32'd1)) & (task_array!=0)) begin
     foreach(C_child_stc1[i,j]) begin 
       if(C_child_stc1[i][j]==int'(C_child_stc1.min())) begin
         ps1[i][j]=1'b1;
