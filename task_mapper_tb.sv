@@ -28,7 +28,7 @@ module array_check_tb;
 
   //pushing each application loop ~~~~~~~~~~ 
   initial begin
-    for(app_1=1;app_1<=120;app_1++) begin
+    for(app_1=1;app_1<=500;app_1++) begin
       app_end=1'b0;
       count_root_task='0;
       // giving opp. becuase of SV array
