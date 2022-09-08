@@ -135,7 +135,7 @@ always@(posedge divby2_clk) begin
           if(int'(C_child_stc1.min())==1000)
             $display(" time =%dns stc1 Cluster is busy",$time);
           else
-            $display(" time =%dns MTC cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
+            $display(" time =%dns stc1 cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
           current_mapped_node_x_stc1=i;
           current_mapped_node_y_stc1=j;
           break;
