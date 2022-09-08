@@ -37,8 +37,6 @@ module array_check_tb;
           task_array = task_graph[i][j];
           `ifdef debug_help  
           $display("time = %f ns i= %d  j=%d task_array= %d task_graph = %d",$time,i,j,task_array,task_graph[i][j]);  
-
-          // $display("time %d ns row %d col %d",$time,row,col);
           `endif
 
           if (task_array!='0) begin 
