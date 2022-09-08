@@ -138,6 +138,116 @@ module task_mapper (
 
 
   //#################### ID decoder##############
+  function logic[63:0] pos_decoder_mtc ( input logic [31:0] id); 
+    logic[31:0] i,j;
+    case(id)
+      0 : {i,j}= {32'd0,32'd0};
+      1 : {i,j}= {32'd0,32'd1};
+      2 : {i,j}= {32'd0,32'd2};
+      3 : {i,j}= {32'd0,32'd3};
+      //
+      8 : {i,j}= {32'd1,32'd0};
+      9 : {i,j}= {32'd1,32'd1};
+      10: {i,j}= {32'd1,32'd2};
+      11: {i,j}= {32'd1,32'd3};
+      //
+      16: {i,j}= {32'd2,32'd0};
+      17: {i,j}= {32'd2,32'd1};
+      18: {i,j}= {32'd2,32'd2};
+      19: {i,j}= {32'd2,32'd3};
+      //
+      24: {i,j}= {32'd3,32'd0};
+      25: {i,j}= {32'd3,32'd1};
+      26: {i,j}= {32'd3,32'd2};
+      27: {i,j}= {32'd3,32'd3}; 
+      default: {i,j}= {32'd0,32'd0};
+    endcase
+    return {i,j};
+  endfunction     
+
+
+  function logic [63:0] pos_decoder_stc1 ( input logic [31:0] id); 
+    logic [31:0] i,j;
+    case({i,j})
+      4:{i,j}= {32'd0,32'd0};
+      5:{i,j}= {32'd0,32'd1};
+      6:{i,j}= {32'd0,32'd2};
+      7:{i,j}= {32'd0,32'd3};
+      //
+      12:{i,j}= {32'd1,32'd0};
+      13:{i,j}= {32'd1,32'd1};
+      14:{i,j}= {32'd1,32'd2};
+      15:{i,j}= {32'd1,32'd3};
+      //
+      20:{i,j}= {32'd2,32'd0};
+      21:{i,j}= {32'd2,32'd1};
+      22:{i,j}= {32'd2,32'd2};
+      23:{i,j}= {32'd2,32'd3};
+      //
+      28:{i,j}= {32'd3,32'd0};
+      29:{i,j}= {32'd3,32'd1};
+      30:{i,j}= {32'd3,32'd2};
+      31:{i,j}= {32'd3,32'd3};
+      default: {i,j}={32'd0,32'd0};
+    endcase
+    return {i,j};
+  endfunction
+
+  function logic [63:0] pos_decoder_stc2 ( input logic [31:0] id); 
+    logic [31:0] i,j;
+    case({i,j})
+      36:{i,j}= {32'd0,32'd0};
+      37:{i,j}= {32'd0,32'd1};
+      38:{i,j}= {32'd0,32'd2};
+      39:{i,j}= {32'd0,32'd3};
+      //
+      44:{i,j}= {32'd1,32'd0};
+      45:{i,j}= {32'd1,32'd1};
+      46:{i,j}= {32'd1,32'd2};
+      47:{i,j}= {32'd1,32'd3};
+      //
+      52:{i,j}= {32'd2,32'd0};
+      53:{i,j}= {32'd2,32'd1};
+      54:{i,j}= {32'd2,32'd2};
+      55:{i,j}= {32'd2,32'd3};
+      //
+      60:{i,j}= {32'd3,32'd0};
+      61:{i,j}= {32'd3,32'd1};
+      62:{i,j}= {32'd3,32'd2};
+      63:{i,j}= {32'd3,32'd3};
+      default: {i,j}={32'd0,32'd0} ;
+    endcase
+    return {i,j};
+  endfunction  
+
+  function logic [63:0] pos_decoder_stc3 (input logic [31:0] id); 
+    logic [31:0] i,j;
+    case(id)
+      32 :{i,j}= {32'd0,32'd0};
+      33 :{i,j}= {32'd0,32'd1};
+      34 :{i,j}=  {32'd0,32'd2};
+      35 :{i,j}=  {32'd0,32'd3};
+      //
+      40 :{i,j}=  {32'd1,32'd0};
+      41 :{i,j}=  {32'd1,32'd1};
+      42 :{i,j}=    {32'd1,32'd2};
+      43 :{i,j}= {32'd1,32'd3};
+      //
+      48 :{i,j}= {32'd2,32'd0};
+      49 :{i,j}= {32'd2,32'd1};
+      50 :{i,j}= {32'd2,32'd2};
+      51 :{i,j}= {32'd2,32'd3};
+      //
+      56 :{i,j}= {32'd3,32'd0};
+      57 :{i,j}= {32'd3,32'd1};
+      58 :{i,j}= {32'd3,32'd2};
+      59 :{i,j}= {32'd3,32'd3};
+      default:{i,j}={32'd0,32'd0};
+    endcase
+    return {i,j};
+  endfunction  
+  /////////////////// 
+
   //clock divider
 
   logic divby2_clk;
@@ -237,9 +347,9 @@ module task_mapper (
     threshold_cluster='{th_stc3,th_stc2,th_stc1,th_mtc};
     item=threshold_cluster.min();
     min_threshold_cluster=threshold_cluster.find_last_index(x) with (x==item[0]);
-    // `ifdef debug_help
+    `ifdef debug_help
     $display("time =%d threshold_cluster array= %p cluster %d has min threshold",$time,threshold_cluster,min_threshold_cluster[0]);
-    // `endif
+    `endif
   end
 
   /////////////////////////////////////////////////////////////////////////
@@ -470,15 +580,17 @@ module task_mapper (
   always @(posedge clk) begin
     if(~rst_b) begin threshold_detection_logic<='0; end
     else begin
-      if((app_end==1'b1) || (real'(th_mtc) > thmax) || (real'(th_stc1) > thmax) ||(real'(th_stc2) > thmax) ||(real'(th_stc3) > thmax))
+      //  if((app_end==1'b1) || (real'(th_mtc) > thmax) || (real'(th_stc1) > thmax) ||(real'(th_stc2) > thmax) ||(real'(th_stc3) > thmax)) //TODO
+      if(app_end==1'b1)
         threshold_detection_logic<=min_threshold_cluster[0];
       else
         threshold_detection_logic<=threshold_detection_logic;
     end
-    // `ifdef debug_help 
+    `ifdef debug_help 
     $display("time %d ns %d cluster selected ",$time,threshold_detection_logic);
-    //`endif
+    `endif
   end
+
   //##############################################################################
 
   //
@@ -494,4 +606,3 @@ module task_mapper (
   //
 
 endmodule
-
