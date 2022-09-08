@@ -82,7 +82,7 @@ end
 
 //###################### MD calculation for child task //######################
 
-always@(posedge clk) begin
+always@(negedge clk) begin
   if((child_task==1'b1)&& (threshold_detection_logic==32'd2)) begin
 
     foreach(ps2[i,j]) begin
@@ -113,30 +113,60 @@ end
 
 
 ////#############################child task mapping final step //#############################  
+logic[31:0] pos_decoder_stc2_x;
+logic[31:0] pos_decoder_stc2_y;
+
 always@(posedge divby2_clk) begin
   if(((child_task==1'b1)&& (threshold_detection_logic==32'd2)) & (task_array!=0)) begin
-    foreach(C_child_stc2[i,j]) begin 
-      if(C_child_stc2[i][j]==int'(C_child_stc2.min())) begin
-        ps2[i][j]=1'b1;
 
-        `ifdef debug_help    
-        $display(" time =%dns cordinates x=%d y=%d PE is busy",$time,i,j);
-        `endif
+    if(task_graph_to_idmap[int'(col)][int'(row)]==0) begin
+      foreach(C_child_stc2[i,j]) begin 
+        if(C_child_stc2[i][j]==int'(C_child_stc2.min())) begin
+          ps2[i][j]=1'b1;
 
-        src_id=  id_decoder_stc2(i,j);
-        task_graph_to_idmap[int'(row)][int'(col)]= src_id;
-        dest_id= (task_graph_to_idmap[int'(col)][int'(row)]==0)?src_id:task_graph_to_idmap[int'(col)][int'(row)];
-        if(int'(C_child_stc2.min())==1000)
-          $display(" time =%dns stc2 Cluster is busy",$time);
-        else
-          $display(" time =%dns stc2 cluster: src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child_stc2.min()));
+          `ifdef debug_help    
+          $display(" time =%dns cordinates x=%d y=%d PE is busy",$time,i,j);
+          `endif
 
-        current_mapped_node_x_stc2=i;
-        current_mapped_node_y_stc2=j;
-        break;
+          src_id=  id_decoder_stc2(i,j);
+          task_graph_to_idmap[int'(row)][int'(col)]= src_id;
+          //dest_id= (task_graph_to_idmap[int'(col)][int'(row)]==0)?src_id:task_graph_to_idmap[int'(col)][int'(row)];
+          dest_id= src_id;
+          if(int'(C_child_stc2.min())==1000)
+            $display(" time =%dns stc2 Cluster is busy",$time);
+          else
+            $display(" time =%dns MTC cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
+          current_mapped_node_x_stc2=i;
+          current_mapped_node_y_stc2=j;
+          break;
+        end
       end
-      else begin
-        //  $display("time %dns Cchild_matrixmin %d",$time,int'(C_child_stc2.min()));
+    end
+
+    else begin
+      {pos_decoder_stc2_x,pos_decoder_stc2_y} = pos_decoder_stc2(task_graph_to_idmap[int'(col)][int'(row)]);
+      current_mapped_node_x_stc2=pos_decoder_stc2_x;
+      current_mapped_node_y_stc2=pos_decoder_stc2_y;
+      `ifdef debug_help  
+      $display(" time =%dns task_graph_to_idmap[int'(col)][int'(row)], =%d current_mapped_node_x= %d current_mapped_node_y=%d",$time,task_graph_to_idmap[int'(col)][int'(row)],current_mapped_node_x_stc2,current_mapped_node_y_stc2);
+      `endif
+    end
+
+  end
+end
+
+always@(negedge divby2_clk) begin
+  if(((child_task==1'b1)&& (threshold_detection_logic==32'd2)) & (task_array!=0)) begin
+    if(task_graph_to_idmap[int'(col)][int'(row)] !=0) begin
+      foreach(C_child_stc2[i,j]) begin 
+        if(C_child_stc2[i][j]==int'(C_child_stc2.min())) begin
+          ps2[i][j]=1'b1;
+          src_id=  id_decoder_stc2(i,j);
+          task_graph_to_idmap[int'(row)][int'(col)]= src_id;
+          dest_id=task_graph_to_idmap[int'(col)][int'(row)];
+          $display(" time =%dns stc2 cluster: src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child_stc2.min()));
+          break;
+        end
       end
     end
   end
