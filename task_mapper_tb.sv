@@ -1,7 +1,7 @@
 // Code your testbench here
 // or browse Examples
 module array_check_tb; 
-  localparam NUM_V=4;   
+  localparam NUM_V=3;   
   reg clk;
   reg rst;
   logic [31:0]task_array; 
@@ -17,23 +17,26 @@ module array_check_tb;
   end
 
 
-  logic [31:0] task_graph [3:0][3:0];
+  logic [31:0] task_graph [NUM_V-1:0][NUM_V-1:0];
   logic [2:0] count_root_task;
   int i,j,app_1;
   logic app_end;
 
   //app_1
-  assign task_graph = '{{32'd0,32'd0,32'd0,32'd7},{32'd0,32'd0,32'd6,32'd0},{32'd0,32'd6,32'd0,32'd5},{32'd7,32'd0,32'd5,32'd0}};
+ //assign task_graph = '{{32'd0,32'd0,32'd0,32'd7},{32'd0,32'd0,32'd6,32'd0},{32'd0,32'd6,32'd0,32'd5},{32'd7,32'd0,32'd5,32'd0}};
 
+  //app_2 (mtc,stc1,stc2 covered)
+  assign task_graph = '{{32'd0,32'd0,32'd7},{32'd0,32'd6,32'd0},{32'd6,32'd0,32'd5}};
 
   //pushing each application loop ~~~~~~~~~~ 
   initial begin
+    @(posedge clk);
     for(app_1=1;app_1<=500;app_1++) begin
       app_end=1'b0;
       count_root_task='0;
       // giving opp. becuase of SV array
-      for(i=0;i<4;i++) begin
-        for(j=0;j<4;j++) begin
+      for(i=0;i<NUM_V;i++) begin
+        for(j=0;j<NUM_V;j++)begin
           task_array = task_graph[i][j];
           `ifdef debug_help  
           $display("time = %f ns i= %d  j=%d task_array= %d task_graph = %d",$time,i,j,task_array,task_graph[i][j]);  
@@ -98,7 +101,7 @@ module array_check_tb;
 
 
   initial 
-    #5000 $finish; //1000 clk cylce simulation
+    #50000 $finish; //1000 clk cylce simulation
 
 
 endmodule
