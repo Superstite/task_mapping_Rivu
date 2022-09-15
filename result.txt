@@ -1,0 +1,859 @@
+ompiler version S-2021.09; Runtime version S-2021.09;  Sep 15 08:49 2022
+ time =                  40ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                  80ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                  90ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                 140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                 190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                 250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                 380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                 420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                 450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                 480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                 550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                 610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                 740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                 780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                 790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                 840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                 890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                 950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                1080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                1120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                1150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                1180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                1250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                1310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                1440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                1480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                1490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                1540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                1590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                1650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                1780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                1820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                1850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                1880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                1950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                2010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                2140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                2180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                2190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                2240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                2290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                2350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                2480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                2520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                2550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                2580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                2650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                2710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                2840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                2880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                2890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                2940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                2990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                3050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                3180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                3220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                3250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                3280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                3350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                3410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                3540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                3580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                3590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                3640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                3690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                3750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                3880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                3920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                3950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                3980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                4050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                4110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                4240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                4280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                4290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                4340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                4390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                4450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                4580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                4620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                4650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                4680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                4750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                4810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                4940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                4980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                4990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                5040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                5090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                5150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                5280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                5320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                5350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                5380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                5450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                5510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                5640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                5680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                5690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                5740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                5790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                5850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                5980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                6020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                6050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                6080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                6150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                6210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                6340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                6380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                6390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                6440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                6490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                6550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                6680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                6720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                6750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                6780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                6850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                6910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                7040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                7080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                7090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                7140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                7190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                7250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                7380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                7420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                7450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                7480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                7550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                7610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                7740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                7780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                7790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                7840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                7890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                7950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                8080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                8120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                8150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                8180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                8250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                8310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                8440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                8480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                8490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                8540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                8590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                8650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                8780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                8820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                8850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                8880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                8950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                9010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                9140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                9180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                9190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                9240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                9290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =                9350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =                9480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =                9520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =                9550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =                9580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =                9650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =                9710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =                9840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =                9880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =                9890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =                9940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =                9990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               10050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               10180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               10220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               10250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               10280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               10350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               10410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               10540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               10580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               10590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               10640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               10690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               10750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               10880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               10920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               10950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               10980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               11050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               11110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               11240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               11280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               11290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               11340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               11390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               11450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               11580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               11620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               11650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               11680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               11750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               11810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               11940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               11980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               11990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               12040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               12090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               12150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               12280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               12320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               12350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               12380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               12450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               12510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               12640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               12680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               12690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               12740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               12790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               12850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               12980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               13020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               13050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               13080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               13150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               13210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               13340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               13380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               13390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               13440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               13490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               13550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               13680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               13720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               13750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               13780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               13850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               13910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               14040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               14080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               14090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               14140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               14190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               14250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               14380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               14420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               14450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               14480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               14550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               14610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               14740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               14780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               14790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               14840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               14890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               14950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               15080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               15120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               15150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               15180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               15250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               15310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               15440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               15480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               15490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               15540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               15590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               15650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               15780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               15820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               15850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               15880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               15950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               16010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               16140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               16180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               16190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               16240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               16290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               16350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               16480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               16520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               16550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               16580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               16650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               16710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               16840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               16880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               16890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               16940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               16990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               17050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               17180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               17220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               17250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               17280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               17350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               17410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               17540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               17580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               17590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               17640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               17690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               17750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               17880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               17920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               17950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               17980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               18050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               18110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               18240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               18280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               18290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               18340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               18390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               18450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               18580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               18620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               18650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               18680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               18750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               18810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               18940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               18980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               18990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               19040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               19090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               19150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               19280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               19320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               19350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               19380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               19450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               19510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               19640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               19680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               19690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               19740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               19790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               19850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               19980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               20020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               20050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               20080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               20150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               20210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               20340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               20380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               20390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               20440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               20490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               20550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               20680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               20720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               20750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               20780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               20850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               20910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               21040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               21080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               21090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               21140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               21190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               21250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               21380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               21420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               21450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               21480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               21550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               21610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               21740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               21780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               21790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               21840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               21890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               21950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               22080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               22120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               22150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               22180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               22250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               22310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               22440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               22480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               22490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               22540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               22590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               22650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               22780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               22820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               22850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               22880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               22950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               23010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               23140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               23180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               23190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               23240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               23290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               23350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               23480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               23520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               23550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               23580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               23650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               23710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               23840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               23880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               23890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               23940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               23990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               24050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               24180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               24220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               24250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               24280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               24350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               24410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               24540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               24580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               24590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               24640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               24690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               24750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               24880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               24920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               24950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               24980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               25050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               25110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               25240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               25280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               25290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               25340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               25390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               25450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               25580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               25620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               25650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               25680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               25750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               25810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               25940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               25980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               25990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               26040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               26090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               26150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               26280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               26320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               26350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               26380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               26450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               26510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               26640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               26680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               26690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               26740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               26790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               26850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               26980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               27020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               27050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               27080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               27150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               27210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               27340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               27380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               27390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               27440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               27490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               27550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               27680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               27720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               27750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               27780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               27850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               27910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               28040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               28080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               28090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               28140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               28190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               28250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               28380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               28420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               28450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               28480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               28550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               28610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               28740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               28780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               28790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               28840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               28890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               28950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               29080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               29120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               29150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               29180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               29250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               29310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               29440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               29480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               29490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               29540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               29590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               29650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               29780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               29820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               29850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               29880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               29950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               30010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               30140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               30180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               30190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               30240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               30290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               30350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               30480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               30520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               30550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               30580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               30650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               30710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               30840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               30880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               30890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               30940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               30990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               31050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               31180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               31220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               31250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               31280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               31350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               31410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               31540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               31580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               31590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               31640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               31690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               31750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               31880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               31920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               31950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               31980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               32050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               32110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               32240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               32280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               32290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               32340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               32390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               32450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               32580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               32620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               32650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               32680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               32750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               32810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               32940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               32980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               32990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               33040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               33090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               33150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               33280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               33320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               33350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               33380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               33450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               33510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               33640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               33680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               33690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               33740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               33790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               33850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               33980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               34020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               34050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               34080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               34150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               34210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               34340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               34380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               34390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               34440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               34490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               34550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               34680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               34720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               34750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               34780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               34850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               34910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               35040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               35080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               35090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               35140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               35190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               35250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               35380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               35420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               35450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               35480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               35550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               35610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               35740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               35780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               35790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               35840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               35890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               35950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               36080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               36120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               36150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               36180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               36250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               36310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               36440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               36480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               36490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               36540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               36590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               36650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               36780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               36820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               36850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               36880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               36950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               37010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               37140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               37180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               37190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               37240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               37290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               37350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               37480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               37520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               37550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               37580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               37650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               37710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               37840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               37880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               37890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               37940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               37990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               38050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               38180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               38220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               38250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               38280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               38350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               38410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               38540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               38580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               38590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               38640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               38690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               38750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               38880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               38920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               38950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               38980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               39050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               39110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               39240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               39280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               39290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               39340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               39390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               39450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               39580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               39620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               39650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               39680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               39750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               39810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               39940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               39980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               39990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               40040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               40090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               40150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               40280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               40320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               40350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               40380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               40450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               40510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               40640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               40680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               40690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               40740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               40790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               40850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               40980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               41020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               41050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               41080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               41150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               41210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               41340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               41380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               41390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               41440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               41490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               41550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               41680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               41720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               41750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               41780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               41850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               41910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               42040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               42080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               42090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               42140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               42190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               42250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               42380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               42420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               42450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               42480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               42550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               42610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               42740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               42780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               42790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               42840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               42890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               42950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               43080ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               43120ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               43150ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               43180ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               43250ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               43310ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               43440ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               43480ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               43490ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               43540ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               43590ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               43650ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               43780ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               43820ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               43850ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               43880ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               43950ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               44010ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               44140ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               44180ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               44190ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               44240ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               44290ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               44350ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               44480ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               44520ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               44550ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               44580ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               44650ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               44710ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               44840ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               44880ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               44890ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               44940ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               44990ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               45050ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               45180ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               45220ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               45250ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               45280ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               45350ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               45410ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               45540ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               45580ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               45590ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               45640ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               45690ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               45750ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               45880ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               45920ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               45950ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               45980ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               46050ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               46110ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               46240ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               46280ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               46290ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               46340ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               46390ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               46450ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               46580ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               46620ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               46650ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               46680ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               46750ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               46810ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               46940ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               46980ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               46990ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               47040ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               47090ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               47150ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               47280ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               47320ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               47350ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               47380ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               47450ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               47510ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               47640ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               47680ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               47690ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               47740ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               47790ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               47850ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               47980ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               48020ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               48050ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               48080ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               48150ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               48210ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               48340ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               48380ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               48390ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               48440ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               48490ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               48550ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               48680ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               48720ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               48750ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               48780ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               48850ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               48910ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               49040ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               49080ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               49090ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               49140ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               49190ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               49250ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
+ time =               49380ns stc1 cluster :- src_id=         31 dest_id=        31 Minimum MD 0 i.e root_task
+ time =               49420ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD 0
+ time =               49450ns stc1 cluster: src_id=         23 dest_id=        31 Minimum MD           1
+ time =               49480ns stc1 cluster: src_id=         29 dest_id=        29 Minimum MD 0
+ time =               49550ns stc1 cluster: src_id=         28 dest_id=        29 Minimum MD           1
+ time =               49610ns stc1 cluster: src_id=         30 dest_id=        30 Minimum MD           0
+ time =               49740ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
+ time =               49780ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
+ time =               49790ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
+ time =               49840ns MTC cluster: src_id=         19 dest_id=        19 Minimum MD 0
+ time =               49890ns MTC cluster: src_id=         27 dest_id=        19 Minimum MD           1
+ time =               49950ns MTC cluster: src_id=         18 dest_id=        26 Minimum MD           1
