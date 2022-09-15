@@ -1,7 +1,7 @@
 // Code your testbench here
 // or browse Examples
 module array_check_tb; 
-  localparam NUM_V=3;   
+  localparam NUM_V=4;   
   reg clk;
   reg rst;
   logic [31:0]task_array; 
@@ -23,10 +23,10 @@ module array_check_tb;
   logic app_end;
 
   //app_1
- //assign task_graph = '{{32'd0,32'd0,32'd0,32'd7},{32'd0,32'd0,32'd6,32'd0},{32'd0,32'd6,32'd0,32'd5},{32'd7,32'd0,32'd5,32'd0}};
+ assign task_graph = '{{32'd0,32'd0,32'd0,32'd7},{32'd0,32'd0,32'd6,32'd0},{32'd0,32'd6,32'd0,32'd5},{32'd7,32'd0,32'd5,32'd0}};
 
   //app_2 (mtc,stc1,stc2 covered)
-  assign task_graph = '{{32'd0,32'd0,32'd7},{32'd0,32'd6,32'd0},{32'd6,32'd0,32'd5}};
+  //assign task_graph = '{{32'd0,32'd0,32'd7},{32'd0,32'd6,32'd0},{32'd6,32'd0,32'd5}};
 
   //pushing each application loop ~~~~~~~~~~ 
   initial begin
