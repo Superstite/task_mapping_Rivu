@@ -1,4 +1,4 @@
-ompiler version S-2021.09; Runtime version S-2021.09;  Sep 15 08:49 2022
+
  time =                  40ns MTC cluster: src_id=         27 dest_id=        27 Minimum MD 0 i.e root_task
  time =                  80ns MTC cluster: src_id=         26 dest_id=        26 Minimum MD 0
  time =                  90ns MTC cluster: src_id=         25 dest_id=        27 Minimum MD           1
