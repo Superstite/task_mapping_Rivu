@@ -4,7 +4,7 @@
 // Code owner:- Rivu Ghosh                          #
 ////////////////////////////////////////////////////
 
-module task_mapper #(NUM_V=3)(
+module task_mapper #(NUM_V=4)(
   input logic clk,
   input logic rst_b,
   input logic [31:0] task_array, // task graph input
@@ -23,8 +23,10 @@ module task_mapper #(NUM_V=3)(
   //Keep this part of code in sync with TB
   int i,j;
   int l,m;
-  //int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
-int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
+  //app_1
+  int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+  //app_2
+//int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
   //#################### ID decoder##############
@@ -168,7 +170,7 @@ int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
 
   function logic [63:0] pos_decoder_stc1 ( input logic [31:0] id); 
     logic [31:0] i,j;
-    case({i,j})
+    case({id})
       4:{i,j}= {32'd0,32'd0};
       5:{i,j}= {32'd0,32'd1};
       6:{i,j}= {32'd0,32'd2};
@@ -195,7 +197,7 @@ int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
 
   function logic [63:0] pos_decoder_stc2 ( input logic [31:0] id); 
     logic [31:0] i,j;
-    case({i,j})
+    case({id})
       36:{i,j}= {32'd0,32'd0};
       37:{i,j}= {32'd0,32'd1};
       38:{i,j}= {32'd0,32'd2};
@@ -564,8 +566,8 @@ int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
   //flush task_graph_to_idmap matrix at end of each application execuetion
   always @(posedge clk) begin
     if(app_end==1'b1)
-      //task_graph_to_idmap <= '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
-      task_graph_to_idmap <= '{{0,0,0},{0,0,0},{0,0,0}};
+      task_graph_to_idmap <= '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+      //task_graph_to_idmap <= '{{0,0,0},{0,0,0},{0,0,0}};
   end
 
 
