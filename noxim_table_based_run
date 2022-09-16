@@ -1,0 +1,12 @@
+make
+
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_1.yaml > log_pir_0_1.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_2.yaml > log_pir_0_2.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_3.yaml > log_pir_0_3.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_4.yaml > log_pir_0_4.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_5.yaml > log_pir_0_5.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_6.yaml > log_pir_0_6.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_7.yaml > log_pir_0_7.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_8.yaml > log_pir_0_8.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_0_9.yaml > log_pir_0_9.txt
+./noxim -config ../config_examples/64_4h_traffic_table_pir_1_0.yaml > log_pir_1_0.txt
