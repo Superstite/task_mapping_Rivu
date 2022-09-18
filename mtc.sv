@@ -134,7 +134,8 @@ always@(posedge divby2_clk) begin
           if(int'(C_child.min())==1000)
             $display(" time =%dns MTC Cluster  is busy",$time);
           else
-            $display(" time =%dns MTC cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
+            //$display(" time =%dns MTC cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
+            $display(" time =%dns MTC cluster: src_id= %d dest_id=%d",$time,src_id,dest_id);
           current_mapped_node_x=i;
           current_mapped_node_y=j;
           break;
@@ -163,7 +164,8 @@ always@(negedge divby2_clk) begin
           src_id=  id_decoder_mtc(i,j);
           task_graph_to_idmap[int'(row)][int'(col)]= src_id;
           dest_id=task_graph_to_idmap[int'(col)][int'(row)];
-          $display(" time =%dns MTC cluster: src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child.min()));
+         // $display(" time =%dns MTC cluster: src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child.min()));
+          $display(" time =%dns MTC cluster: src_id= %d dest_id=%d",$time,src_id,dest_id);
           break;
         end
       end
