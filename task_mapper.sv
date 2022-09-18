@@ -350,7 +350,7 @@ module task_mapper #(NUM_V=2)(
   always@(negedge clk) begin
     threshold_cluster='{th_stc3,th_stc2,th_stc1,th_mtc};
     item=threshold_cluster.min();
-    min_threshold_cluster=threshold_cluster.find_last_index(x) with (x==item[0]);
+    min_threshold_cluster=threshold_cluster.find_first_index(x) with (x==item[0]);
     `ifdef debug_help
     $display("time =%d threshold_cluster array= %p cluster %d has min threshold",$time,threshold_cluster,min_threshold_cluster[0]);
     `endif
