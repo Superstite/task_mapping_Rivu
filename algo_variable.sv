@@ -67,3 +67,4 @@ int signed cmin_child_stc3=1000; //high value intial
 // common variable
 int current_mapped_node_x_stc3,current_mapped_node_y_stc3; 
 //
+logic [31:0] active_cluster;
