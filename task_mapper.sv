@@ -4,12 +4,12 @@
 // Code owner:- Rivu Ghosh                          #
 ////////////////////////////////////////////////////
 
-module task_mapper #(NUM_V=4)(
+module task_mapper #(NUM_V=2)(
   input logic clk,
   input logic rst_b,
   input logic [31:0] task_array, // task graph input
   input logic root_task,app_end, // application start and end indication
-  input logic [31:0] row,col,
+  input logic [31:0] row,col,    //task address
   output logic [31:0] src_id,dest_id
 );
 
@@ -24,9 +24,11 @@ module task_mapper #(NUM_V=4)(
   int i,j;
   int l,m;
   //app_1
-  int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+  //int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
   //app_2
 //int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0,0},{0,0,0},{0,0,0}};
+  //app_3
+  int task_graph_to_idmap[NUM_V-1:0][NUM_V-1:0]  = '{{0,0},{0,0}};
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
   //#################### ID decoder##############
@@ -556,9 +558,13 @@ module task_mapper #(NUM_V=4)(
     end
   end
 
-  assign child_task= root_task_ff & ~root_task;
-
-
+  //assign child_task= root_task_ff & ~root_task;
+  always @(posedge app_end or negedge root_task) begin
+    if(app_end==1'b1)
+       child_task <= '0;
+       else
+       child_task <= root_task_ff & ~root_task;
+       end
   //##############################################################################
 
   //
@@ -566,8 +572,12 @@ module task_mapper #(NUM_V=4)(
   //flush task_graph_to_idmap matrix at end of each application execuetion
   always @(posedge clk) begin
     if(app_end==1'b1)
-      task_graph_to_idmap <= '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+      //app_1
+      //task_graph_to_idmap <= '{{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+      //app_2
       //task_graph_to_idmap <= '{{0,0,0},{0,0,0},{0,0,0}};
+      //app_3
+      task_graph_to_idmap <= '{{0,0},{0,0}};
   end
 
 
@@ -584,8 +594,10 @@ module task_mapper #(NUM_V=4)(
     if(~rst_b) begin threshold_detection_logic<='0; end
     else begin
       //  if((app_end==1'b1) || (real'(th_mtc) > thmax) || (real'(th_stc1) > thmax) ||(real'(th_stc2) > thmax) ||(real'(th_stc3) > thmax)) //TODO
-      if(app_end==1'b1)
+      if(app_end==1'b1) begin 
+        @(posedge clk); @(negedge clk);
         threshold_detection_logic<=min_threshold_cluster[0];
+      end
       else
         threshold_detection_logic<=threshold_detection_logic;
     end
@@ -594,6 +606,8 @@ module task_mapper #(NUM_V=4)(
     `endif
   end
 
+  assign active_cluster=threshold_detection_logic;
+  
   //##############################################################################
 
   //
