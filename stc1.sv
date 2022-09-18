@@ -135,7 +135,8 @@ always@(posedge divby2_clk) begin
           if(int'(C_child_stc1.min())==1000)
             $display(" time =%dns stc1 Cluster is busy",$time);
           else
-            $display(" time =%dns stc1 cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
+            //$display(" time =%dns stc1 cluster: src_id= %d dest_id=%d Minimum MD 0",$time,src_id,dest_id);
+            $display(" time =%dns STC1 cluster: src_id= %d dest_id=%d",$time,src_id,dest_id);
           current_mapped_node_x_stc1=i;
           current_mapped_node_y_stc1=j;
           break;
@@ -164,7 +165,8 @@ always@(negedge divby2_clk) begin
           src_id=  id_decoder_stc1(i,j);
           task_graph_to_idmap[int'(row)][int'(col)]= src_id;
           dest_id=task_graph_to_idmap[int'(col)][int'(row)];
-          $display(" time =%dns stc1 cluster: src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child_stc1.min()));
+          //$display(" time =%dns stc1 cluster: src_id= %d dest_id=%d Minimum MD %d",$time,src_id,dest_id,int'(C_child_stc1.min()));
+          $display(" time =%dns STC1 cluster: src_id= %d dest_id=%d",$time,src_id,dest_id);
           break;
         end
       end
@@ -187,7 +189,6 @@ always@(posedge clk) begin
       `endif
     end
   end
-  //$display(" time =%dns pm matrix %p",$time);
 end
 
 
