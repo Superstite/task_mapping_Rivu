@@ -342,19 +342,26 @@ module task_mapper #(NUM_V=2)(
     //$display("time =%d ns zero %d one %d occupation threshold of stc2 %f",$time,zero_count_stc3,one_count_stc3,th_stc3);
     `endif
   end
-
-  real threshold_cluster[3:0];
+  
+ real threshold_cluster[3:0];
   int min_threshold_cluster[$];
   real item[$];
-
+  int th_var=0;
+  
   always@(negedge clk) begin
     threshold_cluster='{th_stc3,th_stc2,th_stc1,th_mtc};
+    th_var=th_var+1;
     item=threshold_cluster.min();
+    if(th_var%2==0)
     min_threshold_cluster=threshold_cluster.find_first_index(x) with (x==item[0]);
+    else
+      min_threshold_cluster=threshold_cluster.find_last_index(x) with (x==item[0]);
+    
     `ifdef debug_help
     $display("time =%d threshold_cluster array= %p cluster %d has min threshold",$time,threshold_cluster,min_threshold_cluster[0]);
     `endif
   end
+
 
   /////////////////////////////////////////////////////////////////////////
 
